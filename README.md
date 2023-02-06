@@ -4,5 +4,5 @@ This is Googles microservices demo application modified to run on OpenShift with
 
 To deploy the application:
 
-oc new project ms-demo
-oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/application.yaml
+        oc new project ms-demo
+        oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/application.yaml
