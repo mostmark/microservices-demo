@@ -6,3 +6,5 @@ To deploy the application:
 
         oc new project ms-demo
         oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/application.yaml
+
+![OpenShift Console](./images/ms-demo-screenshot1.png)
