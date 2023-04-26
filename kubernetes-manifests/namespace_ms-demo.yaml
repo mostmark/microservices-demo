@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+# if we deploy using ArgoCD we can specify the order of deploy
+  name: ms-demo
+spec: {}
