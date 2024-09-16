@@ -8,3 +8,8 @@ To deploy the application:
         oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/application.yaml
 
 ![OpenShift Console](./images/ms-demo-screenshot1.png)
+
+To deploy clean up:
+
+        oc delete all --all
+        oc delete project ms-demo
