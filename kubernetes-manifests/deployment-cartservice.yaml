@@ -28,34 +28,21 @@ spec:
       - env:
         - name: REDIS_ADDR
           value: redis-cart:6379
-        image: gcr.io/google-samples/microservices-demo/cartservice:v0.5.0
+        image: gcr.io/google-samples/microservices-demo/cartservice:v0.10.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:7070
-            - -rpc-timeout=5s
-          failureThreshold: 3
           initialDelaySeconds: 15
           periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+          grpc:
+            port: 7070
         name: server
         ports:
         - containerPort: 7070
           protocol: TCP
         readinessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:7070
-            - -rpc-timeout=5s
-          failureThreshold: 3
           initialDelaySeconds: 15
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+          grpc:
+            port: 7070
         resources:
           limits:
             cpu: 300m

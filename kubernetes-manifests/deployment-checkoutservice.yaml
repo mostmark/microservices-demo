@@ -40,30 +40,18 @@ spec:
           value: currencyservice:7000
         - name: CART_SERVICE_ADDR
           value: cartservice:7070
-        image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.5.0
+        image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.10.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:5050
-          failureThreshold: 3
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+            grpc:
+              port: 5050
         name: server
         ports:
         - containerPort: 5050
           protocol: TCP
         readinessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:5050
-          failureThreshold: 3
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+            grpc:
+              port: 5050
         resources:
           limits:
             cpu: 200m

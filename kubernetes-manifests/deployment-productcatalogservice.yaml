@@ -29,30 +29,18 @@ spec:
           value: "3550"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.5.0
+        image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.10.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:3550
-          failureThreshold: 3
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+          grpc:
+            port: 3550
         name: server
         ports:
         - containerPort: 3550
           protocol: TCP
         readinessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:3550
-          failureThreshold: 3
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+          grpc:
+            port: 3550
         resources:
           limits:
             cpu: 200m

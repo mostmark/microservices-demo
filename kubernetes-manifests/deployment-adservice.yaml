@@ -27,32 +27,22 @@ spec:
       - env:
         - name: PORT
           value: "9555"
-        image: gcr.io/google-samples/microservices-demo/adservice:v0.5.0
+        image: gcr.io/google-samples/microservices-demo/adservice:v0.10.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:9555
-          failureThreshold: 3
           initialDelaySeconds: 20
           periodSeconds: 15
-          successThreshold: 1
-          timeoutSeconds: 1
+          grpc:
+            port: 9555
         name: server
         ports:
         - containerPort: 9555
           protocol: TCP
         readinessProbe:
-          exec:
-            command:
-            - /bin/grpc_health_probe
-            - -addr=:9555
-          failureThreshold: 3
           initialDelaySeconds: 20
           periodSeconds: 15
-          successThreshold: 1
-          timeoutSeconds: 1
+          grpc:
+            port: 9555
         resources:
           limits:
             cpu: 300m
