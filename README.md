@@ -33,7 +33,7 @@ spec:
         name: ''
         namespace: ms-demo
         server: 'https://kubernetes.default.svc'
-        source:
+    source:
         repoURL: 'https://github.com/mostmark/microservices-demo.git'
         path: kubernetes-manifests
         targetRevision: HEAD
