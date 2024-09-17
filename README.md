@@ -4,31 +4,37 @@ This is the [Online Boutique](https://github.com/GoogleCloudPlatform/microservic
 
 To deploy the application:
 
-        oc new-project ms-demo
-        oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/application.yaml
+```
+oc new-project ms-demo
+oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/application.yaml
+```
 
 ![OpenShift Console](./images/ms-demo-screenshot1.png)
 
 To deploy clean up:
 
-        oc delete all --all
-        oc delete project ms-demo
+```
+oc delete all --all
+oc delete project ms-demo
+```
 
 To deploy the application using Argo CD:
 
-        apiVersion: argoproj.io/v1alpha1
-        kind: Application
-        metadata:
-          name: ms-demo
-          namespace: [YOUR_ARGO_CD_NAMESPACE]
-        spec:
-          destination:
-            name: ''
-            namespace: ms-demo
-            server: 'https://kubernetes.default.svc'
-            source:
-            repoURL: 'https://github.com/mostmark/microservices-demo.git'
-            path: kubernetes-manifests
-            targetRevision: HEAD
-          project: default
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: ms-demo
+    namespace: [YOUR_ARGO_CD_NAMESPACE]
+spec:
+    destination:
+        name: ''
+        namespace: ms-demo
+        server: 'https://kubernetes.default.svc'
+        source:
+        repoURL: 'https://github.com/mostmark/microservices-demo.git'
+        path: kubernetes-manifests
+        targetRevision: HEAD
+    project: default
+```
 
