@@ -26,17 +26,17 @@ To deploy the application using Argo CD:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-    name: ms-demo
-    namespace: [YOUR_ARGO_CD_NAMESPACE]
+  name: ms-demo
+  namespace: [YOUR_ARGO_CD_NAMESPACE]
 spec:
-    destination:
-        name: ''
-        namespace: ms-demo
-        server: 'https://kubernetes.default.svc'
-    source:
-        repoURL: 'https://github.com/mostmark/microservices-demo.git'
-        path: kubernetes-manifests
-        targetRevision: HEAD
-    project: default
+  destination:
+    name: ''
+    namespace: ms-demo
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/mostmark/microservices-demo.git'
+    path: kubernetes-manifests
+    targetRevision: HEAD
+  project: default
 ```
 
