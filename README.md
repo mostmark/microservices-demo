@@ -29,6 +29,6 @@ To deploy the application using Argo CD:
             source:
             repoURL: 'https://github.com/mostmark/microservices-demo.git'
             path: kubernetes-manifests
-          targetRevision: HEAD
+            targetRevision: HEAD
           project: default
 
