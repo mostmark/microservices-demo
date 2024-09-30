@@ -15,7 +15,7 @@ oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/a
 To clean up:
 
 ```
-oc delete all --all
+oc delete all --all -n ms-demo
 oc delete project ms-demo
 
 ```
@@ -44,9 +44,3 @@ spec:
       selfHeal: true
 ```
 
-To clean up:
-
-```
-oc delete Application ms-demo -n openshift-gitops
-
-```
