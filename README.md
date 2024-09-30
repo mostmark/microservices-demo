@@ -40,7 +40,6 @@ spec:
   project: default
   syncPolicy:
     automated:
-      prune: false
       selfHeal: true
 ```
 
