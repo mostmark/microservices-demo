@@ -43,3 +43,11 @@ spec:
       selfHeal: true
 ```
 
+To clean up:
+
+```
+oc patch app ms-demo  -p '{"metadata": {"finalizers": ["resources-finalizer.argocd.argoproj.io"]}}' --type merge -n openshift-gitops
+oc delete app ms-demo -n openshift-gitops
+
+```
+
