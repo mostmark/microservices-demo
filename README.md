@@ -12,7 +12,7 @@ oc apply -f https://raw.githubusercontent.com/mostmark/microservices-demo/main/a
 
 ![OpenShift Console](./images/ms-demo-screenshot1.png)
 
-To deploy clean up:
+To clean up:
 
 ```
 oc delete all --all
