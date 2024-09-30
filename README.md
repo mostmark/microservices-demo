@@ -38,5 +38,9 @@ spec:
     repoURL: 'https://github.com/mostmark/microservices-demo.git'
     targetRevision: HEAD
   project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
 ```
 
