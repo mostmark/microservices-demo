@@ -23,6 +23,7 @@ oc delete project ms-demo
 To deploy the application using OpenShift GitOps (Argo CD):
 
 ```yaml
+oc apply -f - <<EOF
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -41,6 +42,7 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
+EOF
 ```
 
 To clean up:
