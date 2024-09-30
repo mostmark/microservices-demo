@@ -44,3 +44,9 @@ spec:
       selfHeal: true
 ```
 
+To clean up:
+
+```
+oc delete Application ms-demo -n openshift-gitops
+
+```
