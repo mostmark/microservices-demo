@@ -20,14 +20,14 @@ oc delete project ms-demo
 
 ```
 
-To deploy the application using Argo CD:
+To deploy the application using OpenShift GitOps (Argo CD):
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ms-demo
-  namespace: [YOUR_ARGO_CD_NAMESPACE]
+  namespace: openshift-gitops
 spec:
   destination:
     name: ''
