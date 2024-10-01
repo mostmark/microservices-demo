@@ -25,7 +25,7 @@ To deploy the application using OpenShift GitOps (Argo CD):
 ```yaml
 oc apply -f - <<EOF
 apiVersion: argoproj.io/v1alpha1
-kind: application
+kind: Application
 metadata:
   name: ms-demo
   namespace: openshift-gitops
