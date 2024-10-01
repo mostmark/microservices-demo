@@ -25,7 +25,7 @@ To deploy the application using OpenShift GitOps (Argo CD):
 ```yaml
 oc apply -f - <<EOF
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: application
 metadata:
   name: ms-demo
   namespace: openshift-gitops
@@ -49,8 +49,8 @@ EOF
 To clean up:
 
 ```
-oc patch app ms-demo  -p '{"metadata": {"finalizers": ["resources-finalizer.argocd.argoproj.io"]}}' --type merge -n openshift-gitops
-oc delete app ms-demo -n openshift-gitops
+oc patch application ms-demo  -p '{"metadata": {"finalizers": ["resources-finalizer.argocd.argoproj.io"]}}' --type merge -n openshift-gitops
+oc delete application ms-demo -n openshift-gitops
 
 ```
 
