@@ -27,7 +27,7 @@ spec:
       - env:
         - name: PORT
           value: "9555"
-        image: gcr.io/google-samples/microservices-demo/adservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           initialDelaySeconds: 20

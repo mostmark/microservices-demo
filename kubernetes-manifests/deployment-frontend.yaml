@@ -48,7 +48,7 @@ spec:
           value: "shoppingassistantservice:80"
         - name: ENABLE_PROFILER
           value: "0"
-        image: gcr.io/google-samples/microservices-demo/frontend:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3

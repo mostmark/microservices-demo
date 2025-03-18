@@ -32,7 +32,7 @@ spec:
           value: frontend:80
         - name: USERS
           value: "10"
-        image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.2
         imagePullPolicy: IfNotPresent
         name: main
         resources:

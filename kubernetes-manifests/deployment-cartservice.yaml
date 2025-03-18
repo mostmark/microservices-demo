@@ -28,7 +28,7 @@ spec:
       - env:
         - name: REDIS_ADDR
           value: redis-cart:6379
-        image: gcr.io/google-samples/microservices-demo/cartservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           initialDelaySeconds: 15

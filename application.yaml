@@ -27,7 +27,7 @@ spec:
       - env:
         - name: PORT
           value: "9555"
-        image: gcr.io/google-samples/microservices-demo/adservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           initialDelaySeconds: 20
@@ -97,7 +97,7 @@ spec:
       - env:
         - name: REDIS_ADDR
           value: redis-cart:6379
-        image: gcr.io/google-samples/microservices-demo/cartservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           initialDelaySeconds: 15
@@ -178,7 +178,7 @@ spec:
           value: currencyservice:7000
         - name: CART_SERVICE_ADDR
           value: cartservice:7070
-        image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
             grpc:
@@ -245,7 +245,7 @@ spec:
           value: "7000"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/currencyservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           grpc:
@@ -313,7 +313,7 @@ spec:
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/shippingservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           grpc:
@@ -381,7 +381,7 @@ spec:
           value: "8080"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/emailservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           periodSeconds: 5
@@ -469,7 +469,7 @@ spec:
           value: "shoppingassistantservice:80"
         - name: ENABLE_PROFILER
           value: "0"
-        image: gcr.io/google-samples/microservices-demo/frontend:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -559,7 +559,7 @@ spec:
           value: frontend:80
         - name: USERS
           value: "10"
-        image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator:v0.10.2
         imagePullPolicy: IfNotPresent
         name: main
         resources:
@@ -652,7 +652,7 @@ spec:
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           grpc:
@@ -719,7 +719,7 @@ spec:
           value: "3550"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           grpc:
@@ -789,7 +789,7 @@ spec:
           value: productcatalogservice:3550
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           periodSeconds: 5

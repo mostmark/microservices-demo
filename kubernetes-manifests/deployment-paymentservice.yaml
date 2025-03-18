@@ -29,7 +29,7 @@ spec:
           value: "50051"
         - name: DISABLE_PROFILER
           value: "1"
-        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.10.1
+        image: us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice:v0.10.2
         imagePullPolicy: IfNotPresent
         livenessProbe:
           grpc:
