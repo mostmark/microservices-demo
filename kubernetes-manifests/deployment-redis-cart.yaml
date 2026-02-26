@@ -24,7 +24,7 @@ spec:
         app: redis-cart
     spec:
       containers:
-      - image: redis:alpine
+      - image: docker.io/library/redis:alpine
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
