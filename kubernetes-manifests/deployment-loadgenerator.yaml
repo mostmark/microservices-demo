@@ -74,7 +74,7 @@ spec:
         env:
         - name: FRONTEND_ADDR
           value: frontend:80
-        image: busybox:latest
+        image: docker.io/library/busybox:latest
         imagePullPolicy: Always
         name: frontend-check
         resources: {}
